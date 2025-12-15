@@ -1,0 +1,57 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 75b9f50d-47e1-47d7-b891-caa65a85c4ea
+  # title:
+  # description:
+  # keywords: []
+  authors: 
+    - name: Tarik Roukny
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  title: Modern Banking & Financial Technology
+  exports:
+    - format: pdf
+      output: fintech_textbook.pdf
+  toc:
+    - file: index.md
+
+    - title: Foundations of the Financial System
+      children:
+        - file: notebooks/11_banking.ipynb
+        - file: notebooks/12_money.ipynb
+        - file: notebooks/13_payment.ipynb
+        - file: notebooks/14_deposits.ipynb
+        - file: notebooks/15_credit.ipynb
+        - file: notebooks/16_policy.ipynb
+
+    - title: Intro to Financial Technologies
+      children:
+        - file: notebooks/21_fintech_intro.ipynb
+
+    - title: Platforms
+      children:
+        - file: notebooks/31_platform.ipynb
+
+    - title: Data, AI, and Machine Learning
+      children:
+        - file: notebooks/41_machine_learning.ipynb
+
+    - title: Distributed Ledger Technologies
+      children:
+        - file: notebooks/51_blockchain-sdfa.ipynb
+        - file: notebooks/52_defi-sdfa.ipynb
+
+site:
+  # hide_outline: true
+  # hide_toc: true
+  # hide_title_block: true
+  template: book-theme
+  hide_footer_links: true
+  options:
+    hide_search: true
+    hide_myst_footer: true
+    logo_text: "Modern Banking & FinTech"
+    # hide_toc_button: true
+  #   favicon: favicon.ico
+  #   logo: site_logo.png
