@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\geometry{a4paper, margin=1in}
+
+\title{Lecture Notes: CBDC}
+\author{E. C. Akoğuz \\ KU LEUVEN}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+
+According to the Bank for International Settlements (BIS) \cite{bis2017}, money is categorized based on four overlapping properties:
+\begin{itemize}
+    \item \textbf{Issuer:} central bank (e.g. reserve accounts) vs. private (e.g. deposit accounts, crypto).
+    \item \textbf{Form:} electronic (e.g. bank deposits, crypto) vs. physical (e.g. cash).
+    \item \textbf{Accessibility:} Universal (e.g. cash) vs. restricted/wholesale (e.g. reserve accounts)
+    \item \textbf{Technology:} Peer-to-peer/Token-based (e.g. cash, crypto) vs. account-based (e.g. bank deposits)
+\end{itemize}
+
+A Central Bank Digital Currency (CBDC) is a unique form of money that is electronic, central bank issued and widely available to the general public (except wholesale CBCD) that can be token or account based. 
+
+\section{Global Landscape}
+
+The global adoption of CBDCs is accelerating. As of December 2025 \cite{atlantic_2025},
+
+\begin{itemize}
+    \item 3 countries have fully launched a digital currency: the Bahamas, Jamaica, and Nigeria.
+    \item 137 countries \& currency unions, representing 98\% of global GDP, are exploring a CBDC with 72 in advanced phases of exploration. 
+    \item 49 CBDC pilot projects are currently running around the world, the digital euro project of the EU being one of them. 
+\end{itemize}
+Emerging markets are driving global retail CBDC growth:
+\begin{itemize}
+    \item Digital yuan (e-CNY) is the largest CBDC pilot in the world with  a total transaction volume of 7 trillion e-CNY (\$986 billion) in 2024. 
+    \item India’s e-rupee with 10.16 billion rupee (\$122 million) in 2025 is the second-largest CBDC pilot.
+\end{itemize}
+
+\section{Motivations for CBDC Issuance}
+
+    \paragraph{Maintaining public access to central-bank backed money}
+    \begin{itemize}
+        \item Currently, cash is the only form of money that is \textit{risk-free} and \textit{provides instant settlement} that is accessible to public.
+        \item However, the use of cash is in decline: ECB \cite{clipal2025cash} reports that the share of cash in payments decreased across all age groups between 2019 and 2024.
+        
+        \item Meanwhile, the significance of digital economy and digital payments is steadily rising. 
+        \begin{itemize}
+            \item The digital economy makes up more than 15\% of the global GDP \cite{WEF_2022}
+            \item The total value of cashless payments grew by 15\% globally in 2021 \cite{BIS_2023}
+        \end{itemize}
+    \end{itemize}
+
+\paragraph{Preservation of monetary sovereignity.}
+\begin{itemize}
+    \item Wide adoption of stablecoins or private money runs the risk of fully privatized and/or dollarized payment systems, endangering monetary sovereignity, in particular in developing/unstable economies. 
+    \item Currency internationalization: The world is expected to evolve towards a multipolar currency system. The large economies in the world aim to establish or strengthen the role of their currency in international finance through CBDCs \cite{dailami2009new}.
+
+\end{itemize}
+    
+\paragraph{Reducing reliance on foreign, uncompetitive payment providers}
+\begin{itemize}
+    \item Digital payments market is highly concentrated and dominated by US companies, resulting in high interchange fees on merchants and no incentives for innovation. 
+    \item Moreover, the opacity in the collection and usage of user data raise privacy and digital sovereignty concerns.
+\end{itemize} 
+
+\paragraph{Other functionalities for emerging markets} \cite{atlantic_2025}
+\begin{itemize}
+    \item financial inclusion : improve access to digital payments for the unbanked,
+    \item regulatory oversight: reduce the use of cash and the share of informal economy
+\end{itemize}
+
+\section{Potential hazards \& key design challenges of CBDC}
+
+\begin{itemize}
+    \item \textbf{Achieving wide adoption without crowding out private innovation}
+    \begin{itemize}
+        \item Network effects make corner solutions (total failure or market domination) more likely outcomes for a digital currency. A delicate balance will have to be preserved to ensure wide availability and acceptability (to maintain uniformity of currency \& interoperability) without crowding out private actors (not to hamper innovation \& efficiency)
+    \end{itemize}
+    \item \textbf{Preventing financial disintermediation}
+    \begin{itemize}
+        \item Depositors may prefer CBDC accounts over deposit accounts, especially in times of economic uncertainty, thereby increasing banks’ funding cost and leading to financial disintermediation
+        \item The convenience of converting between digital currencies (instead of withdrawing cash) might increase the risk of bank runs. 
+    \end{itemize}
+    \item \textbf{Privacy violation \& use for illicit activities}
+    \begin{itemize}
+        \item While anonymity can protect user privacy, it also makes it more difficult to exercise AML/CFT practices
+        \item Lack of privacy guarantees, on the other hand, can create challenges in managing the public sentiment regarding the threat of a ‘surveillance state’, particularly in countries with less trust in public institutions.
+    \end{itemize}
+\end{itemize}
+
+\section{CBDC Design Features}
+\begin{itemize}
+    \item Interest \& holding caps
+    \begin{itemize}
+        \item If cash eventually disappears, an interest bearing CBDC can overcome the zero-lower bound problem in monetary policy transmission.
+        \item A cap on individual holdings can mitigate the bank disintermediation risk but it can reduce payment functionality 
+        \item A tiered-remuneration is another alternative for mitigating bank disintermediation without creating payment frictions. However it increases complexity which can reduce adoption and raises calibration challenges. 
+    \end{itemize}
+    \item Access technology (account or token based)
+    \begin{itemize}
+        \item Token-based access improves flexibility and innovation but requires safeguards against key loss and may hinder adoption by less sophisticated users.
+    \end{itemize}
+    \item Role of intermediaries
+    \begin{itemize}
+        \item The BIS \cite{auer2020technology} identifies three primary architectural models for retail CBDCs: Direct, Indirect, and Hybrid. These models define the division of labor and legal claims between the central bank and private-sector intermediaries.
+    \end{itemize}
+    \item Functionality
+    \begin{itemize}
+        \item  A payment alternative with add-on functionalities can drive initial adoption but it implies a public cost, limit the capacity for scaling and crowd out innovation by the private sector 
+    \end{itemize}
+\end{itemize}
+
+A recent report by BIS  \cite{BIS_CGIDE_2024_CBDC_Architecture} provides expert opinion on the optimal design of CBDC architecture:
+\begin{itemize}
+    \item The report proposes the adoption of a hybrid architecture where the central bank provides the core public infrastructure (issuance, settlement, and governance), while the private sector (intermediaries) delivers user-facing services (wallet provision, KYC/AML and customer support). This model ensures that CBDC is a direct claim on the central bank while simultaneously leveraging private-sector know-how and encouraging diversity and competition.
+    \item The architecture implies that the central bank maintains a full transaction ledger, but without identity data while identity and KYC information remain with intermediaries, satisfying simultaneously privacy and financial integrity requirements.
+    \item While there is no mention of an interest-bearing design, the report recommends a two-tiered wallet design with and without (or minimal) KYC requirements, each implying different holding and transaction caps. This design choice aims not only at preserving financial stability but also at providing a cash-like alternative with privacy-by-design without compromising financial integrity.
+    \item Lastly, while holding a tech-neutral stance, the report emphasizes the economic potential of the add-on functionalities enabled by a permissioned DLT ledger such as programmability, atomic settlements, delivery-versus-payments, offline payments and interoperability with tokenised assets.
+\end{itemize}  
+
+\section{Alternatives to CBCD}
+
+\subsection{Stablecoins}
+
+Stablecoins have experienced rapid growth in recent years. Unlike cryptocurrencies, stablecoins promise price stability, making them a much more viable option to fulfill the key functions of money, i.e. to serve as a medium of exchange, unit of account and store of value. Yet, until recently, stablecoins were considered unfit for this role due to
+\begin{itemize}
+    \item lack of regulation,
+transparency \& user protection,
+    \item a track record of instability contradicting its core premise
+\end{itemize}
+However, a recent regulatory move by the US is set to change this perception. The recent Genius Act (2025) \cite{genius_act_2025} aims to strengthen regulation, stability, transparency and user protection, mandating
+\begin{itemize}
+    \item a license to operate as a payment stablecoin,
+    \item monthly, audited disclosures of reserve holdings,
+    \item 1:1 backing by high-quality liquid assets,
+    \item prohibition from paying interest, and
+    \item senior priority claims to customers in case of bankruptcy
+\end{itemize}
+
+Nevertheless, even when appropriately regulated, wide adoption of stablecoins brings along certain risks and policy challenges \cite{stablecoin_BIS_2025}:
+\begin{itemize}
+    \item Bank disintermediation: If depositors shift largely into stablecoins, banks lose a key source of cheap, stable funding
+    \item Financial stability risk:
+    \begin{itemize}
+        \item Loss of deposit funding renders banks generally more sensitive to volatility.
+        \item  Stablecoin market remains highly concentrated (90\% of market capitalisation accounted for by USDT and USDC) and stablecoins hold large reserves in treasury bills. Therefore, a potential run from any of these major stablecoins runs the risk of triggering a fire sale of T-bills, spreading risk across the entire financial system.  
+    \end{itemize}
+    \item Run risk: A potential stablecoin run can be faster and more severe than bank runs given that stablecoins
+        \begin{itemize}
+            \item cannot access central bank liquidity or deposit insurance
+            \item tend to have a user base that is more active than small deposit holders
+            \item are susceptible to blockchain \& smart contract dynamics.   
+        \end{itemize}  
+        \item Digital dollarization: Cross border use of stablecoins have been rising - particularly in response to volatility in inflation and exchange rates - which runs the risk of reducing the effectiveness of domestic policy rate.
+    % \end{itemize} 
+\end{itemize}
+
+\subsection{Private money}
+
+\begin{itemize}
+    \item Conceptually, private money diverges from stablecoins in that its supply can be controlled by a private issuer that can act like a central bank, without any requirements for backing.
+    \item There are currently no widely adopted examples of private money. However, BigTech is the most plausible candidate for such undertaking as it requires wide-adoption and trust in the private issuer. The most prominent attempt so far was the Libra project by Meta in 2019 which was shut down in 2022 due to regulatory and political pressures. 
+    \item Private money — along with the usual risks of loss of monetary sovereignty and/or digital dollarization — runs the risk of creating a fragmented digital economy where each ecosystem operates with its own currency, much
+like different countries. This can result in efficiency loss and opportunities for rent extraction by creating currency risk and  switching costs across major digital platforms.  
+\end{itemize}
+
+\newpage
+
+\bibliographystyle{plain}
+\bibliography{references_CBDC}
+
+\end{document}

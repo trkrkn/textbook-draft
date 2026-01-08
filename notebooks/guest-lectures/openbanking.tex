@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\geometry{a4paper, margin=1in}
+\geometry{margin=1in}
+
+\title{Lecture Notes: Open Banking and Finance}
+\author{E. C. Akoğuz \\ KU LEUVEN}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+Open banking/finance is a policy framework that shifts the control of data from financial institutions to the customers themselves by enabling customers to share their financial data with third-party entities through Application Programming Interfaces (APIs) \footnote{The technical bridge that allows for secure, standardized data transmission}. These entities in turn utilize this data to provide specialized financial products - such as loan provision, payment initiation, SME management, accountancy \& tax automation, product comparison or personal finance -  to the end-user. 
+
+While open banking is limited to payment accounts held at banks or equivalent institutions, open finance extends open banking principles to a broader set of financial institutions and products such as credit, savings, investment, pensions and insurance. 
+
+\section{Global Landscape of Open Banking and Open Finance}
+
+According to the recent CCAF (2024) report \cite{CCAF_2024}
+\begin{itemize}
+    \item Open Banking adoption is more globally more widespread in comparison to Open Finance
+\begin{itemize}
+    \item 60 jurisdictions have passed Open Banking legislation, regulation, or official guidance 
+    \item Early adopters are primarily advanced economies, including the UK, the European Union, Australia, the Republic of Korea, and Canada.
+    \item Several emerging markets have also passed Open Banking frameworks, notably Brazil, India, Nigeria, Chile, Turkey, the UAE, and Bahrain.
+\end{itemize}
+
+\item While currently less widespread, the adoption of Open Finance is accelerating.
+
+\begin{itemize}
+    \item Only 16 jurisdictions have passed Open Finance legislation or regulation including Brazil, Australia, the Republic of Korea, Turkey, the UAE, Nigeria, Jordan, Bahrain, and India.
+    \item Approximately 62\% of these jurisdictions are emerging markets and developing economies (EMDEs).
+    \item Major advanced economies lag in Open Finance adoption: the EU Open Finance framework (FiDA) is still in development, the UK Open Finance regime is in planning while the US is transitioning from a market-driven to a regulatory approach.
+\end{itemize}
+
+\item Jurisdictions with the most developed market adoption include
+\begin{itemize}
+    \item \textbf{Brazil}: the most comprehensive Open Finance implementation globally, with broad data scope (banking, payments, credit, insurance, investments), mandatory participation, and strong API standardisation.
+    \item \textbf{Australia}: mature Open Banking combined with expanding Open Finance through the Consumer Data Right.
+    \item \textbf{Republic of Korea}: rapid implementation supported by strong FinTech usage and pre-existing digital payments infrastructure.
+    \item \textbf{European Union}: strong Open Banking adoption under PSD2, though API fragmentation remains a constraint.
+    \item \textbf{United Kingdom}: strong FinTech adoption, particularly in payments and consumer and SME lending.
+\end{itemize}
+
+\item Regulation-led frameworks are empirically associated with faster rollout, broader data coverage, and deeper ecosystem development than market-led frameworks.
+\begin{itemize}
+    \item Countries in Europe, Central Asia, Middle East and North Africa often prefer a regulation-led approach which typically features mandatory data sharing and stronger interoperability requirements.
+
+    \item Countries in Sub-Saharan Africa and Asia-Pacific often prefer a market-driven approach which rely primarily on bilateral agreements or industry schemes and exhibit slower scaling and narrower data coverage.
+
+    \item Latin America and the Caribbeans show no uniform approach (e.g. Brazil and Chile are regulation-led, while Mexico and Argentina are market-driven)
+
+    \item Some market-driven regimes tend to evolve toward regulatory frameworks over time, as seen in the US, New Zealand, Hong Kong, and Thailand.
+\end{itemize}
+\end{itemize}
+
+\section{Motivations for Open Banking}
+Policymakers promote open banking to address several structural issues in traditional finance:
+\begin{itemize}
+    \item \textbf{Efficiency}: Financial data is \textit{nonrival}, meaning its use by one party does not diminish its value for others.
+    \item \textbf{Competition}: The policy breaks the data monopoly held by a few large incumbent institutions.
+    \item \textbf{Innovation}: Incumbents have little incentive to innovate; open access encourages FinTech entry.
+    \item \textbf{Financial Inclusion}: Utilizing alternative data can alleviate information frictions, helping underserved borrowers.
+    \item \textbf{Customer Control}: The policy provides users with a consolidated view of their finances and sovereignty over their financial data.
+\end{itemize}
+
+\section{Early empirical findings}
+
+Early findings suggests that open banking 
+\begin{itemize}
+    \item lowers entry barriers for FinTechs.
+    \begin{itemize}
+        \item More than 400 FinTech firms were created in the EU following the introduction of PSD2 \cite{OECD2023}.
+        \item Nearly 300 firms currently provide open-banking services in the UK \cite{OECD2023}
+        \item Babina et al. (2022) \cite{babina2025customer} show that post Open Banking, the number and volume of FinTech VC deals in a country increases significantly  
+        \item Alonso-Robisco et al. (2025) \cite{alonso2025effects} show that, following PSD2 in Spain, specialized "paytech" firms saw increased revenue growth, enhanced productivity, and reduced reliance on long-term bank debt.
+    \end{itemize}
+    \item improves credit access, particularly for small businesses
+    \begin{itemize}
+        \item  Ghosh et al.(2022) \cite{ghosh2021fintech}shows that a greater use of cashless payments predicts higher rates of loan approval, lower interest rates, less default for unsecured small business loans.
+        \item Yu (2024) \cite{yu2024data} shows that Open Banking enables new forms of collateral (floating lien) such as accounts receivable or inventory.
+    \end{itemize}
+\end{itemize}
+
+\section{Long-term GE effect \& winners and losers}
+\begin{itemize}
+    \item A likely shift from vertically-integrated banks to banks as platforms would simultaneously imply a more competitive market for financial services and loss of spillovers \& synergies among these services. The aggregate impact of such a transition on customer welfare is not straightforward to predict.
+    \item The significant IT and compliance costs associated with Open Bank/Finance puts smaller banks at a competitive disadvantage.
+    \item Improved screening/price discrimination capacity might leave some borrowers worse-off (see Babina et. al. (2022) \cite{babina2025customer}, Parlour et
+    al. (2022) \cite{parlour2022fintech}, He et. al. (2023) \cite{he2023open})
+    \item Banks’ data generating services (e.g. transaction accounts) may become more expensive as they become implicitly more valuable as the gateway to new products and services (Akoguz et al. (2025) \cite{akoguz2025interoperability})
+    \item Parlour et al. (2022)  \cite{parlour2022fintech} claim that data-subjects may be better off if a private entity or a social planner negotiated collectively on their behalf regarding the terms of access to their data.
+    \item  API aggregators can become new intermediaries that leverage network effects to gain market dominance and appropriate rent.
+    \item Open Banking/Finance puts financial institutions at disadvantage against the BigTech entry into finance as the latter is not subject to Open Banking/Finance regulations.
+\end{itemize}
+
+\newpage 
+
+\bibliographystyle{plain}
+\bibliography{references_openbanking}
+
+\end{document}
